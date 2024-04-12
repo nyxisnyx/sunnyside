@@ -1,0 +1,38 @@
+//VARIABLES
+
+//Colors
+$softred: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$darkdesaturatedcyan: hsl(167, 40%, 24%); //graphic design text
+$darkblue: hsl(198, 62%, 26%); //photography text
+$darkmoderatecyan: hsl(168, 34%, 41%); //footer
+$vdarkdesaturatedblue: hsl(212, 27%, 19%);
+$vdarkgrayishblue: hsl(213, 9%, 39%);
+$darkgreyishblue: hsl(232, 10%, 55%);
+$greyishblue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+//Typography
+$bodycopy: 18px;
+
+.fraunces {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700, 900;
+    font-style: normal;
+    font-variation-settings:
+      "SOFT" 0,
+      "WONK" 0;
+  }
+
+$frauncesfont: "Fraunces", serif;
+
+.barlow-semibold {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+$barlowfont: "Barlow", sans-serif;
+
+//END VARIABLES
