@@ -51,6 +51,24 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+@font-face {
+  font-family: "frauncesblack";
+  src: url("fonts/fraunces-variablefont_softwonkopszwght-webfont.woff2") format("woff2"), url("fonts/fraunces-variablefont_softwonkopszwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "barlowextrabold";
+  src: url("fonts/barlow-extrabold-webfont.woff2") format("woff2"), url("fonts/barlow-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "barlowbold";
+  src: url("fonts/barlow-bold-webfont.woff2") format("woff2"), url("fonts/barlow-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .fraunces {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
@@ -89,7 +107,7 @@ header nav {
 header nav a {
   color: hsl(0, 0%, 100%);
   text-decoration: none;
-  font-family: "Fraunces", serif;
+  font-family: "frauncesblack", serif;
   font-size: 3.5vw;
 }
 header .head {
@@ -111,7 +129,7 @@ header .title {
   text-align: center;
   top: 10vh;
   width: 100%;
-  font-family: "Fraunces", serif;
+  font-family: "frauncesblack", serif;
   font-weight: 900;
   color: hsl(0, 0%, 100%);
   text-transform: uppercase;
@@ -157,8 +175,8 @@ main .sectionegg .transformbrand {
 }
 main .sectionegg .transformbrand .darktitle {
   color: hsl(212, 27%, 19%);
-  font-family: "Fraunces", serif;
-  font-weight: bold;
+  font-family: "frauncesblack", serif;
+  font-weight: 900;
   font-size: 10vw;
   line-height: 7vh;
 }
@@ -166,4 +184,225 @@ main .sectionegg .transformbrand .grayp {
   color: hsl(213, 9%, 39%);
   font-family: "Barlow", sans-serif;
   font-weight: 600;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-size: 18px;
+}
+main .sectionegg .transformbrand .learnmore {
+  color: hsl(213, 9%, 39%);
+  font-family: "frauncesblack", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 5;
+  position: relative;
+}
+main .sectionegg .transformbrand .learnmore::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  width: 27vw;
+  height: 1vh;
+  transform: translateX(-50%);
+  background: hwb(51 0% 2%/0.3);
+  z-index: -1;
+  border-radius: 5px;
+}
+main .sectionstand {
+  height: 90vh;
+}
+main .sectionstand .eggstand {
+  width: 100%;
+  height: 40vh;
+}
+main .sectionstand .eggstand img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+main .sectionstand .standout {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 50vh;
+}
+main .sectionstand .standout .darktitle {
+  color: hsl(212, 27%, 19%);
+  font-family: "frauncesblack", serif;
+  font-weight: 900;
+  font-size: 10vw;
+  line-height: 7vh;
+}
+main .sectionstand .standout .grayp {
+  color: hsl(213, 9%, 39%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-size: 18px;
+}
+main .sectionstand .standout .learnmore {
+  color: hsl(213, 9%, 39%);
+  font-family: "frauncesblack", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 5;
+  position: relative;
+}
+main .sectionstand .standout .learnmore::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  width: 27vw;
+  height: 1vh;
+  transform: translateX(-50%);
+  background: hsla(7, 99%, 70%, 0.3);
+  z-index: -1;
+  border-radius: 5px;
+}
+main .sectioncherry {
+  height: 70vh;
+  position: relative;
+}
+main .sectioncherry .cherry {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main .sectioncherry .cherry img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  transform: scale(1.4);
+  z-index: -1;
+}
+main .sectioncherry .graphicdesign {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 20vh;
+  z-index: 1;
+  position: absolute;
+  bottom: 4vh;
+}
+main .sectioncherry .graphicdesign .dctitle {
+  color: hsl(167, 40%, 24%);
+  font-family: "frauncesblack", serif;
+  font-weight: 900;
+  font-size: 10vw;
+  line-height: 7vh;
+}
+main .sectioncherry .graphicdesign .dcyanp {
+  color: hsl(168, 34%, 41%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-size: 18px;
+}
+main .sectionclem {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+}
+main .sectionclem .clem {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main .sectionclem .clem img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  transform: scale(1.2);
+  z-index: -1;
+}
+main .sectionclem .photography {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 20vh;
+  z-index: 1;
+  position: absolute;
+  bottom: 4vh;
+}
+main .sectionclem .photography .modbluetitle {
+  color: hsl(198, 62%, 26%);
+  font-family: "frauncesblack", serif;
+  font-weight: 900;
+  font-size: 10vw;
+  line-height: 7vh;
+}
+main .sectionclem .photography .modbluep {
+  color: hsl(198, 62%, 26%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-size: 18px;
+}
+main .testimonials {
+  height: 140vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .testimonials .clientstestimonials {
+  font-family: "frauncesblack", serif;
+  color: hsl(210, 4%, 67%);
+  text-transform: uppercase;
+  font-size: 3.5vw;
+  letter-spacing: 1vw;
+  margin-top: 2vh;
+}
+main .testimonials .client {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main .testimonials .client .clientp {
+  border-radius: 90px;
+  overflow: hidden;
+  width: 10vh;
+}
+main .testimonials .client .tquote {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(167, 40%, 24%);
+}
+main .testimonials .client .clientname {
+  font-family: "frauncesblack", serif;
+  font-weight: 900;
+  font-size: 3.5vw;
+  color: hsl(213, 9%, 39%);
+  margin-top: -2vh;
+}
+main .testimonials .client .clienttitle {
+  color: hsl(210, 4%, 67%);
+  font-family: "Barlow", sans-serif;
+  margin-top: -5vh;
 }/*# sourceMappingURL=style.css.map */

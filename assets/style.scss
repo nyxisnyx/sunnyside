@@ -4,7 +4,9 @@
 
 //Colors
 $softred: hsl(7, 99%, 70%);
+$sheersoftred: hsla(7, 99%, 70%, 0.3);
 $yellow: hsl(51, 100%, 49%);
+$sheeryellow: hwb(51 0% 2% / 0.3);
 $darkdesaturatedcyan: hsl(167, 40%, 24%); //graphic design text
 $darkblue: hsl(198, 62%, 26%); //photography text
 $darkmoderatecyan: hsl(168, 34%, 41%); //footer
@@ -17,6 +19,30 @@ $white: hsl(0, 0%, 100%);
 //Typography
 $bodycopy: 18px;
 
+@font-face {
+    font-family: 'frauncesblack';
+    src: url('fonts/fraunces-variablefont_softwonkopszwght-webfont.woff2') format('woff2'),
+         url('fonts/fraunces-variablefont_softwonkopszwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'barlowextrabold';
+    src: url('fonts/barlow-extrabold-webfont.woff2') format('woff2'),
+         url('fonts/barlow-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'barlowbold';
+    src: url('fonts/barlow-bold-webfont.woff2') format('woff2'),
+         url('fonts/barlow-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .fraunces {
     font-family: "Fraunces", serif;
     font-optical-sizing: auto;
@@ -27,7 +53,7 @@ $bodycopy: 18px;
       "WONK" 0;
   }
 
-$frauncesfont: "Fraunces", serif;
+$frauncesfont: 'frauncesblack', serif;
 
 .barlow-semibold {
     font-family: "Barlow", sans-serif;
@@ -144,7 +170,7 @@ main {
             .darktitle {
                 color:$vdarkdesaturatedblue;
                 font-family: $frauncesfont;
-                font-weight:bold;
+                font-weight:900;
                 font-size:10vw;
                 line-height:7vh;
             }
@@ -153,8 +179,254 @@ main {
                 color:$vdarkgrayishblue;
                 font-family: $barlowfont;
                 font-weight:600;
+                padding-left:10vw;
+                padding-right:10vw;
+                font-size: $bodycopy;
+            }
+
+            .learnmore {
+                color: $vdarkgrayishblue;
+                font-family: $frauncesfont;
+                font-weight: 600;
+                text-transform: uppercase;
+                z-index:5;
+                position:relative;
+            }
+
+            .learnmore::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: 15%;
+                width: 27vw;
+                height: 1vh;
+                transform: translateX(-50%);
+                background: $sheeryellow;
+                z-index: -1;
+                border-radius:5px;
+              }
+
+        }
+    }
+
+    .sectionstand {
+        height:90vh;
+
+        .eggstand {
+            width:100%;
+            height:40vh;
+
+            img {
+                object-fit:cover;
+                width:100%;
+                height:100%;
+            }
+        }
+
+        .standout {
+            background-color:$white;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align:center;
+            height:50vh;
+
+            .darktitle {
+                color:$vdarkdesaturatedblue;
+                font-family: $frauncesfont;
+                font-weight:900;
+                font-size:10vw;
+                line-height:7vh;
+            }
+
+            .grayp {
+                color:$vdarkgrayishblue;
+                font-family: $barlowfont;
+                font-weight:600;
+                padding-left:10vw;
+                padding-right:10vw;
+                font-size: $bodycopy;
+            }
+
+            .learnmore {
+                color: $vdarkgrayishblue;
+                font-family: $frauncesfont;
+                font-weight: 600;
+                text-transform: uppercase;
+                z-index:5;
+                position:relative;
+            }
+
+            .learnmore::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: 15%;
+                width: 27vw;
+                height: 1vh;
+                transform: translateX(-50%);
+                background: $sheersoftred;
+                z-index: -1;
+                border-radius:5px;
+            }
+
+        }
+    }
+    
+    .sectioncherry {
+        height:70vh;
+        position:relative;
+
+        .cherry {
+            width:100%;
+            height:100%;
+            position:relative;
+            overflow:hidden;
+
+            img {
+                object-fit:cover;
+                position:absolute;
+                width:100%;
+                height:100%;
+                object-position: 50% 0%;
+                transform:scale(1.4);
+                z-index:-1;
+            }
+        }
+
+        .graphicdesign {
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align:center;
+            height:20vh;
+            z-index:1;
+            position:absolute;
+            bottom:4vh;
+
+            .dctitle {
+                color:$darkdesaturatedcyan;
+                font-family: $frauncesfont;
+                font-weight:900;
+                font-size:10vw;
+                line-height:7vh;
+            }
+
+            .dcyanp {
+                color:$darkmoderatecyan;
+                font-family: $barlowfont;
+                font-weight:600;
+                padding-left:10vw;
+                padding-right:10vw;
+                font-size: $bodycopy;
             }
         }
     }
 
+    .sectionclem {
+        height:70vh;
+        width:100%;
+        position:relative;
+
+        .clem {
+            width:100%;
+            height:100%;
+            position:relative;
+            overflow:hidden;
+
+            img {
+                object-fit:cover;
+                position:absolute;
+                width:100%;
+                height:100%;
+                object-position: 50% 0%;
+                transform:scale(1.2);
+                z-index:-1;
+            }
+        }
+
+        .photography {
+            display:flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align:center;
+            height:20vh;
+            z-index:1;
+            position:absolute;
+            bottom:4vh;
+
+            .modbluetitle {
+                color:$darkblue;
+                font-family: $frauncesfont;
+                font-weight:900;
+                font-size:10vw;
+                line-height:7vh;
+            }
+
+            .modbluep {
+                color:$darkblue;
+                font-family: $barlowfont;
+                font-weight:600;
+                padding-left:10vw;
+                padding-right:10vw;
+                font-size: $bodycopy;
+            }
+        }
+    }
+
+    .testimonials {
+        height:140vh;
+        position: relative;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items:center;
+
+        .clientstestimonials {
+            font-family:$frauncesfont;
+            color:$greyishblue;
+            text-transform: uppercase;
+            font-size:3.5vw;
+            letter-spacing: 1vw;
+            margin-top:2vh;
+        }
+
+        .client {
+            height:40vh;
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-around;
+            align-items:center;
+
+            .clientp {
+                border-radius:90px;
+                overflow:hidden;
+                width:10vh;
+            }
+
+            .tquote {
+                margin-left:10vw;
+                margin-right: 10vw;
+                font-family: $barlowfont;
+                font-weight:600;
+                text-align:center;
+                color:$darkdesaturatedcyan;
+            }
+
+            .clientname {
+                font-family:$frauncesfont;
+                font-weight:900;
+                font-size:3.5vw;
+                color:$vdarkgrayishblue;
+                margin-top:-2vh;
+            }
+
+            .clienttitle {
+                color:$greyishblue;
+                font-family: $barlowfont;
+                margin-top:-5vh;
+            }
+        }
+    }
 }
