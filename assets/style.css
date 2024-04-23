@@ -405,4 +405,48 @@ main .testimonials .client .clienttitle {
   color: hsl(210, 4%, 67%);
   font-family: "Barlow", sans-serif;
   margin-top: -5vh;
+}
+main .gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer {
+  background-color: hsl(165, 83%, 68%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40vh;
+}
+footer figure {
+  filter: invert(21%) sepia(13%) saturate(5203%) hue-rotate(130deg) brightness(27%) contrast(71%);
+}
+footer figure img {
+  position: relative; /* Allows an absolute positioned psuedo element */
+}
+footer figure img img::after {
+  position: absolute; /* Positions psuedo element relative to .icon */
+  width: 100%; /* Same dimensions as .icon */
+  height: 100%;
+  content: ""; /* Allows psuedo element to show */
+  background: hsl(167, 40%, 24%); /* The color you want the icon to change to */
+  mix-blend-mode: multiply; /* Only apply color on top of white, use screen if icon is black */
+}
+footer .footerlinks {
+  color: hsl(167, 40%, 24%);
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+footer .footersocials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+footer .footersocials figure .social {
+  filter: invert(21%) sepia(13%) saturate(5203%) hue-rotate(130deg) brightness(27%) contrast(71%);
 }/*# sourceMappingURL=style.css.map */

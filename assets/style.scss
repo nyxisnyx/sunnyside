@@ -10,6 +10,7 @@ $sheeryellow: hwb(51 0% 2% / 0.3);
 $darkdesaturatedcyan: hsl(167, 40%, 24%); //graphic design text
 $darkblue: hsl(198, 62%, 26%); //photography text
 $darkmoderatecyan: hsl(168, 34%, 41%); //footer
+$darkmoderatecyansheer: hsl(165, 83%, 68%); //footer
 $vdarkdesaturatedblue: hsl(212, 27%, 19%);
 $vdarkgrayishblue: hsl(213, 9%, 39%);
 $darkgreyishblue: hsl(232, 10%, 55%);
@@ -426,6 +427,61 @@ main {
                 color:$greyishblue;
                 font-family: $barlowfont;
                 margin-top:-5vh;
+            }
+        }
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+footer {
+    background-color: $darkmoderatecyansheer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height:40vh;
+
+    figure {
+        filter: invert(21%) sepia(13%) saturate(5203%) hue-rotate(130deg) brightness(27%) contrast(71%);
+
+        img {
+            position: relative; /* Allows an absolute positioned psuedo element */
+
+            img::after{
+                position: absolute; /* Positions psuedo element relative to .icon */
+                width: 100%; /* Same dimensions as .icon */
+                height: 100%;
+                content: ""; /* Allows psuedo element to show */
+                background: hsl(167, 40%, 24%); /* The color you want the icon to change to */
+                mix-blend-mode: multiply; /* Only apply color on top of white, use screen if icon is black */
+            }
+        }
+
+        
+    }
+
+    .footerlinks {
+        color:$darkdesaturatedcyan;
+        display:flex;
+        width:100%;
+        justify-content: space-evenly;
+        font-size:$bodycopy;
+        font-family: $barlowfont;
+    }
+
+    .footersocials {
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width:50%;
+
+        figure {
+            .social {
+                filter: invert(21%) sepia(13%) saturate(5203%) hue-rotate(130deg) brightness(27%) contrast(71%);
             }
         }
     }
